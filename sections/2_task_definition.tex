@@ -1,5 +1,5 @@
 \section{Task Definition}
-To collect vehicle data of the Fleet Management System (FMS) and provide IP-based access, a dedicated device has to be developed. It acts as a gateway (communication bridge) and connects the internal CAN-Bus to an Ethernet interface (LAN and wireless should be supported).
+To collect vehicle data of the Fleet Management System (FMS) and provide IP-based access, a dedicated device has to be developed. It acts as a gateway (communication bridge) and connects the internal CAN-Bus to the on-board network router via LAN or WLAN.
 
 
 A general block diagram of the system is shown in \cref{fig:constellation_HW}.
@@ -7,15 +7,17 @@ A general block diagram of the system is shown in \cref{fig:constellation_HW}.
 \medskip
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=9cm]{images/Block_Diagram}
+	\includegraphics[height=5cm]{images/Block_Diagram}
 	\caption{System Block Diagram}
 	%\vspace{-2ex}
 	%\caption*{\textbf{Source:} Original task definition}
 	\label{fig:constellation_HW}
 \end{figure}
 
-FMS-Packages are received by the gateway and then get redirected to a local server application, running on the vehicles on-board network router.
-Further, the information can be transmitted over the internet to a cloud-based system.
+FMS-Packets are received and processed by the gateway. A configurable filter decides which packets get forwarded and limits the maximal transmission update rate. The network router acts as a receiver, which can upload the information  over the internet to a cloud-based system.
+Device settings as well as the filter configuration
+
+To gather additional motion data of the vehicle, an inertial measurement unit (IMU) should be integrated.
 
 \begin{itemize}
 	\item bla 1

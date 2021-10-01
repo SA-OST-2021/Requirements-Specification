@@ -1,13 +1,19 @@
 \newpage
 \section{Product Requirements}
-\subsection{Protocols and Interfaces}
-blabla
 
 \subsection{Hardware}
-The on purpose build, custom hardware contains all necessary components integrated on a single printed circuit board (PCB).
-The core is based on a micro controller of the ESP32-Family. 
-
-
+The on purpose build, custom hardware contains all necessary components integrated on a single printed circuit board (PCB). The hardware needs to comply with the following requirements: 
+\begin{itemize}
+		\item The hardware shall be based around an ESP32 System on Chip.
+		\item The hardware shall use LAN/WLAN to communicate with the network router.
+		\item The hardware shall have a CAN interface to receive FMS-packages from the vehicle.
+		\item The CAN interface shall be galvanically isolated from the rest of the hardware.
+		\item The hardware shall have an inertial measurement unit (IMU) with at least 6 axis of freedom.
+		\item The hardware shall be able to show the current device status (e.g. LEDs).
+		\item The hardware shall be capable of operating with 12 to 24 Volts.
+		\item The hardware shall be enclosed in a case in order to minimize dust and moisture getting into the system.
+		\item The hardware should have an USB interface for configuration.
+\end{itemize}
 
 \subsection{Firmware}
 For all use cases defined in \cref{sec:use_cases}, 
