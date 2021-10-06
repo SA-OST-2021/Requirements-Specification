@@ -7,9 +7,8 @@
 % Packages, Layout, Units, etc.
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \input{header/header}
-
-\input{sections/glossary_acronyms}
 \makeglossaries
+\input{sections/glossary_acronyms}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % Dokument
@@ -73,14 +72,18 @@
 %    \addcontentsline{toc}{section}{List of Listings}
 %			
 %	% Glossary and Acronyms
-%	\printglossaries
+    \glsnogroupskiptrue
+    \printglossary[type=\acronymtype]
+    \printglossary
+	\newpage
 	
-	%Includes	
+	%Includes
 	\input{sections/1_introduction}
 	\input{sections/2_task_definition}
 	\input{sections/3_product_requirements}
 	\input{sections/4_use_cases}
-	%\input{sections/5_global_requirements}
+	\input{sections/5_project_schedule}
+	
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % ANHANG
