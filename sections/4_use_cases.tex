@@ -2,7 +2,11 @@
 \section{Use Cases}
 \label{sec:use_cases}
 \subsection{UC1 Driving Quality Analysis}
-Having a clear understanding of a drivers behavior, is very important for fleet operators. Having data about the vehicle operators can lead to less emissions, improve customer satisfaction and improve the drivers behavior. Our system can be deployed to gather driving data.  
+Having a clear understanding of a drivers behavior, is very important for fleet operators. Having data about the vehicle operators can lead to less emissions, improve customer satisfaction and improve the drivers behavior. Our system can be deployed to gather driving data in a very detailed manner.
+The \acrlong{imu} provides accurate motion data of the vehicle, which leads to a better understanding of the driving performance.
 
 \subsection{UC2 Vehicle Maintenance Report}
-Managing a large fleet of vehicles requires enormous effort. In order to minimize down time it is important to preemptively warn about upcoming and present issues. Our system makes it possible gather continuous information about the status of the fleet without physical access. 
+Managing a large fleet of vehicles requires enormous effort. In order to minimize down time it is important to preemptively warn about upcoming and present issues. Our system makes it possible to gather continuous information about the status of the fleet without physical access. 
+
+\subsection{UC3 Real Time Telemetry Data}
+Most of modern vehicles are already equipped with \acrshort{gnss} receivers for providing location updates to the \acrlong{fms}. However it is difficult to differentiate if a vehicle is currently parked or just slowly moving (e.g. due to traffic jams). With the help of knowing the exact driving velocity, a better prediction of potential arrival time can be achieved. Additional data, like the state of passenger doors can directly inform the system about a potential delay of departure.
